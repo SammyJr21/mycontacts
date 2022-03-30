@@ -6,7 +6,8 @@
   "author": "Sammy Junior ",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "uuidv4": "^6.2.13"
   },
   "scripts": {
     "postinstall": "ls",
