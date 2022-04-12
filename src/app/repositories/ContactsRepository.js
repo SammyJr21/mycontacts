@@ -1,5 +1,4 @@
 const db = require('../../database');
-
 class ContactsRepository {
   async findAll(orderBy = 'ASC') {
     const direction = orderBy.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
@@ -18,13 +17,13 @@ class ContactsRepository {
   }
 
   async create({
-    name, email, phone, categoryId,
+    name, email, phone, category_id,
   }) {
-    const [row] = await db.query(`
+    const [ row ] = await db.query(`
     INSERT INTO contacts(name, email, phone, category_id)
     VALUES($1, $2, $3, $4)
     RETURNING *
-    `, [name, email, phone, categoryId]);
+    `, [name, email, phone, category_id]);
 
     return row;
   }

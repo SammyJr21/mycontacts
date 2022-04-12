@@ -12,7 +12,7 @@ module.exports = {
   },
   rules: {
     'class-methods-use-this': 'off',
-    'no-promise-executor-return': 'off',
+    // 'no-promise-executor-return': 'off',
     'consistent-return': 'off',
     camelcase : false,
   },
